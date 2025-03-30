@@ -9,13 +9,13 @@ class MovieGrid extends React.Component {
     loading: true,
   };
   componentDidMount() {
-    fetch("http://www.omdbapi.com/?apikey=195bb9c1&s=matrix")
+    fetch("https://www.omdbapi.com/?apikey=195bb9c1&s=matrix")
       .then((response) => response.json())
       .then((data) => this.setState({ movies: data.Search, loading: false }));
   }
   searchMovies = (str, type = "all") => {
     fetch(
-      `http://www.omdbapi.com/?apikey=195bb9c1&s=${str}${
+      `https://www.omdbapi.com/?apikey=195bb9c1&s=${str}${
         type !== "all" ? `&type=${type}` : ""
       }`
     )

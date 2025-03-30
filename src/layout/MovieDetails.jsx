@@ -9,7 +9,7 @@ export function MovieDetails() {
   const [loading, setloading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?apikey=af5717ed&i=${id}`)
+    fetch(`https://www.omdbapi.com/?apikey=af5717ed&i=${id}`)
       .then((responce) => responce.json())
       .then((data) => {
         if (data.Response === "True") {
