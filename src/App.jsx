@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<MovieGrid/>}/>
-        <Route path="movie/:id" element={<MovieDetails/>}/>
+        <Route path="films/" element={<MovieGrid/>}/>
+        <Route path="films/movie/:id" element={<MovieDetails/>}/>
       </Routes>
 
       <Footer />
