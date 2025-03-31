@@ -8,7 +8,10 @@ export function Movies(props) {
     return (
       <div className="movies">
         {movies.map((movie) => (
-          <Link to={`films/movie/${movie.imdbID}`} key={movie.imdbID}>
+          <Link
+            to={`/films/movie/${movie.imdbID}`}
+            key={movie.imdbID}
+          >
             <Movie {...movie} />
           </Link>
         ))}
